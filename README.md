@@ -130,12 +130,12 @@ If you find BoxeR useful in your research, please consider citing:
   conda activate boxer
   ```
 
-- PyTorch>=1.10.1, torchvision>=0.11.2 (following instructions [here](https://pytorch.org/))
+- PaddlePaddle>=2.1.0 
 
-  For example, you could install pytorch and torchvision as following:
+  For example, you could install paddlepaddle as following:
 
   ```bash
-  conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+  pip install paddlepaddle-gpu==2.1.0 -f https://www.paddlepaddle.org.cn/whl/windows/mkl/avx/stable.html
   ```
 
 - Other requirements & Compilation
