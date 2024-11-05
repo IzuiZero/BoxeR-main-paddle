@@ -16,23 +16,6 @@ This repository is an official implementation of the paper [BoxeR: Box-Attention
 
 **Abstract.** In this paper, we propose a simple attention mechanism, we call box-attention. It enables spatial interaction between grid features, as sampled from boxes of interest, and improves the learning capability of transformers for several vision tasks. Specifically, we present BoxeR, short for Box Transformer, which attends to a set of boxes by predicting their transformation from a reference window on an input feature map. The BoxeR computes attention weights on these boxes by considering its grid structure. Notably, BoxeR-2D naturally reasons about box information within its attention module, making it suitable for end-to-end instance detection and segmentation tasks. By learning invariance to rotation in the box-attention module, BoxeR-3D is capable of generating discriminative information from a bird's-eye view plane for 3D end-to-end object detection. Our experiments demonstrate that the proposed BoxeR-2D achieves state-of-the-art results on COCO detection and instance segmentation. Besides, BoxeR-3D improves over the end-to-end 3D object detection baseline and already obtains a compelling performance for the vehicle category of Waymo Open, without any class-specific optimization.
 
-## License
-
-This project is released under the [MIT License](./LICENSE).
-
-## Citing BoxeR
-
-If you find BoxeR useful in your research, please consider citing:
-
-```bibtex
-@article{nguyen2021boxer,
-  title={BoxeR: Box-Attention for 2D and 3D Transformers},
-  author={Duy{-}Kien Nguyen and Jihong Ju and Olaf Booij and Martin R. Oswald and Cees G. M. Snoek},
-  journal={arXiv preprint arXiv:2111.13087},
-  year={2021}
-}
-```
-
 ## Main Results
 
 ### COCO Instance Segmentation Baselines with BoxeR-2D
@@ -281,4 +264,3 @@ You can get the statistics of BoxeR (fps, flops, \# parameters) by running `tool
 python tools/analyze.py --config-path save/COCO-InstanceSegmentation/boxer2d_R_101_3x.yaml --model-path save/COCO-InstanceSegmentation/boxer2d_final.pth --tasks speed flop parameter
 ```
 
-The notebook for BoxeR-2D visualization is provided in `tools/visualization/BoxeR_2d_segmentation.ipynb`.
